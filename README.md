@@ -14,6 +14,6 @@ __Installation Guide:__
 - Clone this repository
 - Open Command prompt for the current environment and go to 'web_app' directory. Then, type the following commands:
   - pip install -r requirements.txt
-  - python main.py
+  - flask run
 - Copy the url address shown on the terminal window. Then open a browser and paste the url.
 
