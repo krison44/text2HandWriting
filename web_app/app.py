@@ -79,7 +79,7 @@ def result():
 @app.route('/api/url', methods=['GET', 'POST'])
 def url():
     if request.method == 'GET':
-        return send_file('./handwritten.pdf')
+        return send_file('./pages/page1.png')
 
 # when running app locally
 if __name__=='__main__':

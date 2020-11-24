@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
-import { timer } from 'rxjs';
-import { take } from 'rxjs/operators';
 import { AppService } from '../app.service';
 
 @Component({
@@ -23,7 +21,8 @@ export class TextToHandwritingComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
-    this.handWrittednOutputUrl = null;
+    // this.isResultAvailable = true;
+    // this.isLoading = false;
   }
 
   createForm() {
@@ -35,9 +34,7 @@ export class TextToHandwritingComponent implements OnInit {
   submitForm() {
     this.isLoading = true;
     this.isResultAvailable = false;
-    this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
-    this.service.postText(this.textToHandWritingForm.value).subscribe(response => {
-      this.handWrittednOutputUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
+    this.service.postText(this.textToHandWritingForm.value).subscribe(() => {
       this.isResultAvailable = true;
       this.isLoading = false;
     });
@@ -46,6 +43,5 @@ export class TextToHandwritingComponent implements OnInit {
   clearForm() {
     this.textToHandWritingForm.reset();
     this.isResultAvailable = false;
-    this.handWrittednOutputUrl = null;
   }
 }
