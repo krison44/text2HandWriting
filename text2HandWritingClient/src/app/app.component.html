@@ -1,0 +1,27 @@
+<!-- <div class="container-fluid">
+  <ul class="nav nav-tabs mt-3">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/text2handwriting" routerLinkActive="active">Write Text</a>
+    </li>
+  </ul>
+  <app-home></app-home>
+  <app-text-to-handwriting></app-text-to-handwriting>
+</div> -->
+
+<div class="container-fluid">
+  <mat-tab-group>
+    <mat-tab label="Home">
+      <app-home></app-home>
+    </mat-tab>
+    <mat-tab label="Write Text">
+      <app-text-to-handwriting></app-text-to-handwriting>
+      <!-- <div class="row mt-3">
+        <app-user-input></app-user-input>
+        <app-result></app-result>
+      </div> -->
+    </mat-tab>
+  </mat-tab-group>  
+</div>

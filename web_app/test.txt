@@ -1,0 +1,7 @@
+For beginners
+The best place to start is with the user-friendly Sequential API. 
+You can create models by plugging together building blocks. 
+Run the “Hello World” example below, then visit the tutorials to learn more.
+
+To learn ML, check out our education page. Begin with curated curriculums to 
+improve your skills in foundational ML areas.

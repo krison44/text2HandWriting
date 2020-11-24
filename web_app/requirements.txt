@@ -1,1 +1,5 @@
-Flask>=0.12
+matplotlib
+numpy
+pillow
+tensorflow
+img2pdf
